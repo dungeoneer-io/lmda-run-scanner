@@ -59,7 +59,7 @@ const sendToDatabase = async ({ runs, mvrs, global }) => {
     console.log('transmitting current mvrs...');
     await upsertMvrs(mvrs);
 
-    if (global) {
+    if (global.period) {
         console.log('transmitting dungeon last scan stamps...');
         await updatePeriodFixtureWithScanStamps(global);
     }
