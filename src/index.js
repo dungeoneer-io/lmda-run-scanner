@@ -14,7 +14,6 @@ const harvestAndUpsertData = async (lambdaEvent) => {
     await sendToDatabase(payloadToWrite);
 };
 
-
 exports.handler = async (event = {}, context) => {
     console.log('Dungeoneer.io');
     console.log('lmda-run-scanner');
@@ -28,4 +27,3 @@ exports.handler = async (event = {}, context) => {
         fn500: (e) => console.log('error', e)
     });
 };
-

@@ -1,0 +1,510 @@
+[
+  {
+    "ranking": 1,
+    "duration": 2268243,
+    "completed_timestamp": 1663737672000,
+    "keystone_level": 23,
+    "members": [
+      {
+        "profile": {
+          "name": "Champish",
+          "id": 223432895,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/57?namespace=dynamic-us"
+            },
+            "id": 57,
+            "slug": "illidan"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/104?namespace=static-9.2.7_44981-us"
+          },
+          "id": 104
+        }
+      },
+      {
+        "profile": {
+          "name": "Ksnoob",
+          "id": 227974670,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/1427?namespace=dynamic-us"
+            },
+            "id": 1427,
+            "slug": "ragnaros"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/267?namespace=static-9.2.7_44981-us"
+          },
+          "id": 267
+        }
+      },
+      {
+        "profile": {
+          "name": "Sladdi",
+          "id": 157201853,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "ALLIANCE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/254?namespace=static-9.2.7_44981-us"
+          },
+          "id": 254
+        }
+      },
+      {
+        "profile": {
+          "name": "Valiantdx",
+          "id": 162885871,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/1566?namespace=dynamic-us"
+            },
+            "id": 1566,
+            "slug": "area-52"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/105?namespace=static-9.2.7_44981-us"
+          },
+          "id": 105
+        }
+      },
+      {
+        "profile": {
+          "name": "Björnne",
+          "id": 238086145,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/5?namespace=dynamic-us"
+            },
+            "id": 5,
+            "slug": "proudmoore"
+          }
+        },
+        "faction": {
+          "type": "ALLIANCE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/62?namespace=static-9.2.7_44981-us"
+          },
+          "id": 62
+        }
+      }
+    ],
+    "mythic_rating": {
+      "color": {
+        "r": 255,
+        "g": 128,
+        "b": 0,
+        "a": 1
+      },
+      "rating": 165.38332
+    }
+  },
+  {
+    "ranking": 2,
+    "duration": 1983546,
+    "completed_timestamp": 1663723917000,
+    "keystone_level": 19,
+    "members": [
+      {
+        "profile": {
+          "name": "Gijora",
+          "id": 87467751,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/257?namespace=static-9.2.7_44981-us"
+          },
+          "id": 257
+        }
+      },
+      {
+        "profile": {
+          "name": "Shirkan",
+          "id": 173768958,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/72?namespace=static-9.2.7_44981-us"
+          },
+          "id": 72
+        }
+      },
+      {
+        "profile": {
+          "name": "Ðruid",
+          "id": 173768438,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/104?namespace=static-9.2.7_44981-us"
+          },
+          "id": 104
+        }
+      },
+      {
+        "profile": {
+          "name": "Lukaiia",
+          "id": 173783082,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/253?namespace=static-9.2.7_44981-us"
+          },
+          "id": 253
+        }
+      },
+      {
+        "profile": {
+          "name": "Aureila",
+          "id": 133339746,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/70?namespace=static-9.2.7_44981-us"
+          },
+          "id": 70
+        }
+      }
+    ],
+    "mythic_rating": {
+      "color": {
+        "r": 255,
+        "g": 128,
+        "b": 0,
+        "a": 1
+      },
+      "rating": 146.90413
+    }
+  },
+  {
+    "ranking": 3,
+    "duration": 1807724,
+    "completed_timestamp": 1663803073000,
+    "keystone_level": 18,
+    "members": [
+      {
+        "profile": {
+          "name": "Pandorynhä",
+          "id": 155065677,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/3209?namespace=dynamic-us"
+            },
+            "id": 3209,
+            "slug": "azralon"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/264?namespace=static-9.2.7_44981-us"
+          },
+          "id": 264
+        }
+      },
+      {
+        "profile": {
+          "name": "Katátia",
+          "id": 148502527,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/3209?namespace=dynamic-us"
+            },
+            "id": 3209,
+            "slug": "azralon"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/254?namespace=static-9.2.7_44981-us"
+          },
+          "id": 254
+        }
+      },
+      {
+        "profile": {
+          "name": "Rebukke",
+          "id": 62071430,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/253?namespace=static-9.2.7_44981-us"
+          },
+          "id": 253
+        }
+      },
+      {
+        "profile": {
+          "name": "Shaðowsongs",
+          "id": 158907220,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/3209?namespace=dynamic-us"
+            },
+            "id": 3209,
+            "slug": "azralon"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/268?namespace=static-9.2.7_44981-us"
+          },
+          "id": 268
+        }
+      },
+      {
+        "profile": {
+          "name": "Gagortion",
+          "id": 244056829,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/60?namespace=dynamic-us"
+            },
+            "id": 60,
+            "slug": "stormrage"
+          }
+        },
+        "faction": {
+          "type": "ALLIANCE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/72?namespace=static-9.2.7_44981-us"
+          },
+          "id": 72
+        }
+      }
+    ],
+    "mythic_rating": {
+      "color": {
+        "r": 255,
+        "g": 128,
+        "b": 0,
+        "a": 1
+      },
+      "rating": 142.84335
+    }
+  },
+  {
+    "ranking": 4,
+    "duration": 2208560,
+    "completed_timestamp": 1663782288000,
+    "keystone_level": 18,
+    "members": [
+      {
+        "profile": {
+          "name": "Thunderman",
+          "id": 214678672,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/66?namespace=dynamic-us"
+            },
+            "id": 66,
+            "slug": "dalaran"
+          }
+        },
+        "faction": {
+          "type": "ALLIANCE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/262?namespace=static-9.2.7_44981-us"
+          },
+          "id": 262
+        }
+      },
+      {
+        "profile": {
+          "name": "Sinamon",
+          "id": 162287668,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/1356?namespace=dynamic-us"
+            },
+            "id": 1356,
+            "slug": "sisters-of-elune"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/267?namespace=static-9.2.7_44981-us"
+          },
+          "id": 267
+        }
+      },
+      {
+        "profile": {
+          "name": "Dragolord",
+          "id": 95973829,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/100?namespace=dynamic-us"
+            },
+            "id": 100,
+            "slug": "earthen-ring"
+          }
+        },
+        "faction": {
+          "type": "HORDE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/105?namespace=static-9.2.7_44981-us"
+          },
+          "id": 105
+        }
+      },
+      {
+        "profile": {
+          "name": "Xendekay",
+          "id": 198474355,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/3725?namespace=dynamic-us"
+            },
+            "id": 3725,
+            "slug": "frostmourne"
+          }
+        },
+        "faction": {
+          "type": "ALLIANCE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/250?namespace=static-9.2.7_44981-us"
+          },
+          "id": 250
+        }
+      },
+      {
+        "profile": {
+          "name": "Valenhall",
+          "id": 248346921,
+          "realm": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/realm/60?namespace=dynamic-us"
+            },
+            "id": 60,
+            "slug": "stormrage"
+          }
+        },
+        "faction": {
+          "type": "ALLIANCE"
+        },
+        "specialization": {
+          "key": {
+            "href": "https://us.api.blizzard.com/data/wow/playable-specialization/251?namespace=static-9.2.7_44981-us"
+          },
+          "id": 251
+        }
+      }
+    ],
+    "mythic_rating": {
+      "color": {
+        "r": 255,
+        "g": 128,
+        "b": 0,
+        "a": 1
+      },
+      "rating": 140.70213
+    }
+  }
+]

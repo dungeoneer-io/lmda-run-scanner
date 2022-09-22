@@ -2,23 +2,11 @@ const {
     queueUntilResolved,
     getMythicLeaderboard
 } = require('@dungeoneer-io/nodejs-utils');
-
-const facToIdMap = {
-    NEUTRAL: 2,
-    HORDE: 1,
-    ALLIANCE: 0
-};
+const { mapApiRunToRun } = require('./bapi-mapper/run-snapshot');
 
 const getSnapshot = async (lambdaEvent) => {
     const { crealmIds, dungeonIds, period, afterEpoch = 0 } = lambdaEvent;
 
-    const mapRunMember = (member) => ({
-        nme: member.profile.name,
-        rlm: member.profile.realm.id,
-        fac: facToIdMap[member.faction.type],
-        spc: member.specialization.id
-    });
-    
     const fetchLeaderboardAndTransformResult = async ({
         afterEpoch,
         ...dpr
@@ -27,19 +15,27 @@ const getSnapshot = async (lambdaEvent) => {
         
         const recentRuns = (leaderboard.leading_groups || [])
             .filter((lg) => (lg.completed_timestamp / 1000) > afterEpoch)
-            .map(lg => ({
-                _id: `${lg.keystone_level}-${leaderboard.map_challenge_mode_id}-${lg.duration}-${lg.completed_timestamp / 1000}`,
-                end: lg.completed_timestamp / 1000,
-                map: leaderboard.map_challenge_mode_id,
-                lvl: lg.keystone_level,
-                dur: lg.duration,
-                who: lg.members.map(m => mapRunMember(m, lg)),
-                p: leaderboard.period
-              }));
+            .map(mapApiRunToRun(leaderboard.map_challenge_mode_id, leaderboard.period));
     
+        const count = recentRuns.length;
+        const lastRun = recentRuns[recentRuns.length - 1];
+
+        let min = { lvl: 0, dur: 0 };
+
+        if (count === 500) {
+            min = { lvl: lastRun.lvl, dur: lastRun.dur };
+        }
+
+        const { dungeon, period, realm } = dpr;
         const lbData = {
-            recentRuns,
-            mvr: {}
+            mvr: {
+                _id: `${period}-${realm}-${dungeon}`,
+                asof: Date.now(),
+                count,
+                min,
+                ...dpr
+            },
+            recentRuns
         };
         return lbData;
     };
@@ -64,9 +60,12 @@ const getSnapshot = async (lambdaEvent) => {
             }))
         )
     );
+
+    const mvrs = runLists.results.map(({ mvr }) => mvr);
     
     return {
-        runs: Object.values(fullRunList)
+        runs: Object.values(fullRunList),
+        mvrs
     };
 };
 

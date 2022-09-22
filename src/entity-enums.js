@@ -7,7 +7,7 @@ const COLLECTIONS = {
     RACES: 'PlayableRaces',
     CLASSES: 'PlayableClasses',
     SPECIALIZATIONS: 'PlayableSpecs',
-    // PERIODFIXTURES: 'ZPH_PeriodFixtures'
+    MVRS: 'Mvrs',
     RUNS: 'Runs'
 };
 

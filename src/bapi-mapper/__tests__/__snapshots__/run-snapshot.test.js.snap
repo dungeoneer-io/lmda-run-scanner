@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transformers mapApiRunToRun 1`] = `
+[
+  {
+    "_id": "23-123-2268243-1663737672",
+    "dur": 2268243,
+    "end": 1663737672,
+    "lvl": 23,
+    "map": 123,
+    "p": 456,
+    "who": [
+      {
+        "fac": 1,
+        "nme": "Champish",
+        "rlm": 57,
+        "spc": 104,
+      },
+      {
+        "fac": 1,
+        "nme": "Ksnoob",
+        "rlm": 1427,
+        "spc": 267,
+      },
+      {
+        "fac": 0,
+        "nme": "Sladdi",
+        "rlm": 100,
+        "spc": 254,
+      },
+      {
+        "fac": 1,
+        "nme": "Valiantdx",
+        "rlm": 1566,
+        "spc": 105,
+      },
+      {
+        "fac": 0,
+        "nme": "Björnne",
+        "rlm": 5,
+        "spc": 62,
+      },
+    ],
+  },
+  {
+    "_id": "19-123-1983546-1663723917",
+    "dur": 1983546,
+    "end": 1663723917,
+    "lvl": 19,
+    "map": 123,
+    "p": 456,
+    "who": [
+      {
+        "fac": 1,
+        "nme": "Gijora",
+        "rlm": 100,
+        "spc": 257,
+      },
+      {
+        "fac": 1,
+        "nme": "Shirkan",
+        "rlm": 100,
+        "spc": 72,
+      },
+      {
+        "fac": 1,
+        "nme": "Ðruid",
+        "rlm": 100,
+        "spc": 104,
+      },
+      {
+        "fac": 1,
+        "nme": "Lukaiia",
+        "rlm": 100,
+        "spc": 253,
+      },
+      {
+        "fac": 1,
+        "nme": "Aureila",
+        "rlm": 100,
+        "spc": 70,
+      },
+    ],
+  },
+  {
+    "_id": "18-123-1807724-1663803073",
+    "dur": 1807724,
+    "end": 1663803073,
+    "lvl": 18,
+    "map": 123,
+    "p": 456,
+    "who": [
+      {
+        "fac": 1,
+        "nme": "Pandorynhä",
+        "rlm": 3209,
+        "spc": 264,
+      },
+      {
+        "fac": 1,
+        "nme": "Katátia",
+        "rlm": 3209,
+        "spc": 254,
+      },
+      {
+        "fac": 1,
+        "nme": "Rebukke",
+        "rlm": 100,
+        "spc": 253,
+      },
+      {
+        "fac": 1,
+        "nme": "Shaðowsongs",
+        "rlm": 3209,
+        "spc": 268,
+      },
+      {
+        "fac": 0,
+        "nme": "Gagortion",
+        "rlm": 60,
+        "spc": 72,
+      },
+    ],
+  },
+  {
+    "_id": "18-123-2208560-1663782288",
+    "dur": 2208560,
+    "end": 1663782288,
+    "lvl": 18,
+    "map": 123,
+    "p": 456,
+    "who": [
+      {
+        "fac": 0,
+        "nme": "Thunderman",
+        "rlm": 66,
+        "spc": 262,
+      },
+      {
+        "fac": 1,
+        "nme": "Sinamon",
+        "rlm": 1356,
+        "spc": 267,
+      },
+      {
+        "fac": 1,
+        "nme": "Dragolord",
+        "rlm": 100,
+        "spc": 105,
+      },
+      {
+        "fac": 0,
+        "nme": "Xendekay",
+        "rlm": 3725,
+        "spc": 250,
+      },
+      {
+        "fac": 0,
+        "nme": "Valenhall",
+        "rlm": 60,
+        "spc": 251,
+      },
+    ],
+  },
+]
+`;
