@@ -8,7 +8,8 @@ const COLLECTIONS = {
     CLASSES: 'PlayableClasses',
     SPECIALIZATIONS: 'PlayableSpecs',
     MVRS: 'Mvrs',
-    RUNS: 'Runs'
+    RUNS: 'Runs',
+    PERIODFIXTURES: 'ZPH_PeriodFixtures'
 };
 
 const BAPI_MYTHIC_RESOURCE_TYPES = {

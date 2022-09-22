@@ -15,7 +15,8 @@ const doProcess = async () => {
         crealmIds: [100, 104, 106, 1070, 1071, 1072, 11, 1129, 113, 1136, 1138, 114, 1147, 115, 1151, 1168],
         dungeonIds: [391,392,370,369],
         period: 873,
-        afterEpoch: 0
+        afterEpoch: 0,
+        isAGlobalScan: true
     });
 
     console.log('success.');

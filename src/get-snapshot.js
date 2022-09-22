@@ -5,7 +5,7 @@ const {
 const { mapApiRunToRun } = require('./bapi-mapper/run-snapshot');
 
 const getSnapshot = async (lambdaEvent) => {
-    const { crealmIds, dungeonIds, period, afterEpoch = 0 } = lambdaEvent;
+    const { crealmIds, dungeonIds, period, afterEpoch = 0, isAGlobalScan = false } = lambdaEvent;
 
     const fetchLeaderboardAndTransformResult = async ({
         afterEpoch,
@@ -63,9 +63,18 @@ const getSnapshot = async (lambdaEvent) => {
 
     const mvrs = runLists.results.map(({ mvr }) => mvr);
     
+    let globalScanAttrs = {};
+    if (isAGlobalScan) {
+        globalScanAttrs = {
+            dungeonIds,
+            period
+        };
+    }
+
     return {
         runs: Object.values(fullRunList),
-        mvrs
+        mvrs,
+        global: globalScanAttrs
     };
 };
 

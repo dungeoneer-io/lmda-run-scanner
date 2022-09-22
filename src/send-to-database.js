@@ -37,12 +37,32 @@ const upsertMvrs = async (mvrArray) => {
     await batch.execute();
 };
 
-const sendToDatabase = async ({ runs, mvrs }) => {
+const updatePeriodFixtureWithScanStamps = async ({ period, dungeonIds }) => {
+    const periodFixtureColl = await getDb()
+        .db(DATABASES.DEFAULT)
+        .collection(COLLECTIONS.PERIODFIXTURES);
+
+    const setObj = Object.assign({}, ...dungeonIds.map((o) => ({ [`dungeonLastScans.${o}`]: Date.now() })));
+
+    await periodFixtureColl.updateOne(
+        { _id: period },
+        {
+            $set: setObj
+        }
+    );
+};
+
+const sendToDatabase = async ({ runs, mvrs, global }) => {
     console.log('transmitting unique runs...');
     await upsertRuns(runs);
 
     console.log('transmitting current mvrs...');
     await upsertMvrs(mvrs);
+
+    if (global) {
+        console.log('transmitting dungeon last scan stamps...');
+        await updatePeriodFixtureWithScanStamps(global);
+    }
 };
 
 module.exports = sendToDatabase;
