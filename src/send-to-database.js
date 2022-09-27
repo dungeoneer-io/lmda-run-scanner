@@ -47,9 +47,9 @@ const tempReceipt = async (countFound, countNew) => {
     const receiptColl = await getDb()
         .db(DATABASES.DEFAULT)
         .collection("testReceipts");
-
+    const abc = new Date();
     await receiptColl.insertOne({
-        stamp: Date.now().toISOString(),
+        stamp: abc.toISOString(),
         countFound,
         countNew
     });
