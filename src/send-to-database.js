@@ -49,7 +49,7 @@ const tempReceipt = async (countFound, countNew) => {
         .collection("testReceipts");
 
     await receiptColl.insertOne({
-        stamp: Date.now(),
+        stamp: Date.now().toISOString(),
         countFound,
         countNew
     });
