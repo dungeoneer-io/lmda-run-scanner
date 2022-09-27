@@ -24,7 +24,7 @@ const upsertRuns = async (runArray) => {
     }
     const results = await batch.execute();
     console.log(`${runArray.length} sent, ${results.result.nUpserted} added`);
-    tempReceipt(runArray.length, results.result.nUpserted);
+    tempReceipt(runArray.length, results.result.nUpserted, results.result.upserted.map(({ _id }) =>  _id ));
 };
 
 const upsertMvrs = async (mvrArray) => {
@@ -43,7 +43,7 @@ const upsertMvrs = async (mvrArray) => {
     await batch.execute();
 };
 
-const tempReceipt = async (countFound, countNew) => {
+const tempReceipt = async (countFound, countNew, news = []) => {
     const receiptColl = await getDb()
         .db(DATABASES.DEFAULT)
         .collection("testReceipts");
@@ -51,7 +51,8 @@ const tempReceipt = async (countFound, countNew) => {
     await receiptColl.insertOne({
         stamp: abc.toISOString(),
         countFound,
-        countNew
+        countNew,
+        news
     });
 };
 

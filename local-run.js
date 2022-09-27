@@ -30,7 +30,7 @@ const doProcess = async () => {
             //234, 369, 370,
             391, 392
           ],
-        period: 873,
+        period: 874,
         afterEpoch: 0,//Date.now()-86360,
         isAGlobalScan: true
     });
