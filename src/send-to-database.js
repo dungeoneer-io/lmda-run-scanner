@@ -17,6 +17,10 @@ const upsertRuns = async (runArray) => {
                 $set: run
             });
     });
+    if (runArray.length === 0) {
+        console.log('no new runs');
+        return;
+    }
     const results = await batch.execute();
     console.log(`${runArray.length} sent, ${results.result.nUpserted} added`);
 };

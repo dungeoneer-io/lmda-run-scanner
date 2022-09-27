@@ -40,6 +40,7 @@ const getSnapshot = async (lambdaEvent) => {
         return lbData;
     };
 
+
     const leaderboardsToScan = crealmIds.map(realm => ({ realm }))
         .map(({ realm }) => dungeonIds.map(dungeon => ({ dungeon, period, realm, afterEpoch })))
         .reduce((acc, arr) => [...acc, ...arr], []);
@@ -49,18 +50,11 @@ const getSnapshot = async (lambdaEvent) => {
         leaderboardsToScan,
         40,
         3,
-        { showBar: true, debug: true }
+        { showBar: true, debug: true, promiseTimeoutMs: 15500 }
     )
     .catch(o => console.log('uncaught all the way up to doProcess'));
 
-    const fullRunList = Object.assign({}, ...runLists.results
-        .flatMap(({ recentRuns }) =>
-            recentRuns.map((run) => ({
-                [run._id]: run
-            }))
-        )
-    );
-
+    const fullRunList = runLists.results.flatMap(({ recentRuns }) => recentRuns);
     const mvrs = runLists.results.map(({ mvr }) => mvr);
     
     let globalScanAttrs = {};
@@ -72,7 +66,7 @@ const getSnapshot = async (lambdaEvent) => {
     }
 
     return {
-        runs: Object.values(fullRunList),
+        runs: fullRunList,
         mvrs,
         global: globalScanAttrs
     };
