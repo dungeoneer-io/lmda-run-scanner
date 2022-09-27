@@ -19,10 +19,12 @@ const upsertRuns = async (runArray) => {
     });
     if (runArray.length === 0) {
         console.log('no new runs');
+        tempReceipt(runArray.length, 0);
         return;
     }
     const results = await batch.execute();
     console.log(`${runArray.length} sent, ${results.result.nUpserted} added`);
+    tempReceipt(runArray.length, results.result.nUpserted);
 };
 
 const upsertMvrs = async (mvrArray) => {
@@ -39,6 +41,18 @@ const upsertMvrs = async (mvrArray) => {
             });
     });
     await batch.execute();
+};
+
+const tempReceipt = async (countFound, countNew) => {
+    const receiptColl = await getDb()
+        .db(DATABASES.DEFAULT)
+        .collection("testReceipts");
+
+    await receiptColl.insertOne({
+        stamp: Date.now(),
+        countFound,
+        countNew
+    });
 };
 
 const updatePeriodFixtureWithScanStamps = async ({ period, dungeonIds }) => {
