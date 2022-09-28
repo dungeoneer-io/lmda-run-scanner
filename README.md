@@ -40,7 +40,7 @@ Lambda Function Using:
 - Deploy to github to leverage GitHub Actions written in .github\workflows
 - Add projects secrets to github repo `AWS_ACCESS_KEY_ID`, `DISCORD_NOTIFICATION_WEBHOOK`, and `AWS_SECRET_ACCESS_KEY`
 - Will need to have a named lambda function already created by the name in deploy yml. `lmda-run-scanner` here
-- Pre-made lambda is going to need environment variables on board, also make local uncommitted .env with those same values. It'll make sure local runs work
+- Pre-made lambda is going to need environment variables on board, also make local uncommitted .env with those same values. It'll make sure local runs work, include `SCAN_TIMEOUT_MS` if you want to override the default of 12000ms
 - Create Event Rule in Amazon EventBridge to kick off the named lambda every day
 
         Much of this will be in a Terraform file so it doesn't need to be done manually

@@ -45,12 +45,13 @@ const getSnapshot = async (lambdaEvent) => {
         .map(({ realm }) => dungeonIds.map(dungeon => ({ dungeon, period, realm, afterEpoch })))
         .reduce((acc, arr) => [...acc, ...arr], []);
 
+    const promiseTimeoutMs = process.env.SCAN_TIMEOUT_MS || 12000;
     const runLists = await queueUntilResolved(
         fetchLeaderboardAndTransformResult,
         leaderboardsToScan,
         40,
         3,
-        { showBar: true, debug: true, promiseTimeoutMs: 12000 }
+        { showBar: true, debug: true, promiseTimeoutMs }
     )
     .catch(o => console.log('uncaught all the way up to doProcess'));
 
