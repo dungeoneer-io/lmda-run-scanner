@@ -50,7 +50,7 @@ const getSnapshot = async (lambdaEvent) => {
         leaderboardsToScan,
         40,
         3,
-        { showBar: true, debug: true, promiseTimeoutMs: 3000 }
+        { showBar: true, debug: true, promiseTimeoutMs: 12000 }
     )
     .catch(o => console.log('uncaught all the way up to doProcess'));
 
