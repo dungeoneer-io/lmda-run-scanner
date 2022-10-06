@@ -1,11 +1,61 @@
 const {
     queueUntilResolved,
-    getMythicLeaderboard
+    getMythicLeaderboard,
+    getDb
 } = require('@dungeoneer-io/nodejs-utils');
 const { mapApiRunToRun } = require('./bapi-mapper/run-snapshot');
+const {
+    COLLECTIONS,
+    DATABASES
+} = require('./entity-enums');
+
+const getPeriodFixture = async (periodid) => {
+    const fixtureCollection = await getDb()
+        .db(DATABASES.DEFAULT)
+        .collection(COLLECTIONS.PERIODFIXTURES);
+
+    console.log(`retrieving snapshot ${ periodid }`);
+    let snapshot;
+
+    if (periodid) {
+        snapshot = await fixtureCollection.findOne({ _id: periodid });
+    }
+    if (!snapshot) {
+        console.log('undefined or unavailable fixture, using latest');
+        snapshot = await fixtureCollection.findOne({}, { sort: {$natural:-1}});
+    }
+
+    const periodFixture = {
+        dungeonIds: Object.keys(snapshot.dungeonMap),
+        crealmIds: [...new Set(Object.values(snapshot.rlmToCrlm))],
+        period: snapshot._id
+    };
+
+    return periodFixture;
+};
 
 const getSnapshot = async (lambdaEvent) => {
-    const { crealmIds, dungeonIds, period, afterEpoch = 0, isAGlobalScan = false } = lambdaEvent;
+    let {
+        crealmIds,
+        dungeonIds,
+        period,
+        afterEpoch = 0,
+        isAGlobalScan = false
+    } = lambdaEvent;
+
+    if (!crealmIds || !dungeonIds || !period) {
+        const periodFixture = await getPeriodFixture(period);
+
+        if (!crealmIds) {
+            crealmIds = periodFixture.crealmIds;
+        }
+
+        if (!dungeonIds) {
+            dungeonIds = [periodFixture.dungeonIds[0]];
+        }
+
+        period = periodFixture.period;
+    }
 
     const fetchLeaderboardAndTransformResult = async ({
         afterEpoch,
