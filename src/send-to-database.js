@@ -9,13 +9,20 @@ const upsertRuns = async (runArray) => {
         .db(DATABASES.DEFAULT)
         .collection(COLLECTIONS.RUNS);
     const batch = runColl.initializeUnorderedBulkOp();
+    runArray.sort((a, b) => a._id > b._id ? -1 : 1);
 
+    const last = undefined;
+    const sent = 0;
     runArray.forEach((run) => {
-        batch.find({ _id: `${run._id}` })
-            .upsert()
-            .updateOne({
-                $set: run
-            });
+        if (run._id !== last) {
+            batch.find({ _id: `${run._id}` })
+                .upsert()
+                .updateOne({
+                    $set: run
+                });
+            sent++;
+        }
+        last = run._id;
     });
     if (runArray.length === 0) {
         console.log('no new runs');
@@ -23,8 +30,8 @@ const upsertRuns = async (runArray) => {
         return;
     }
     const results = await batch.execute();
-    console.log(`${runArray.length} sent, ${results.result.nUpserted} added`);
-    tempReceipt(runArray.length, results.result.nUpserted, results.result.upserted.map(({ _id }) =>  _id ));
+    console.log(`${runArray.length} runs, ${sent} sent, ${results.result.nUpserted} added`);
+    tempReceipt(sent, results.result.nUpserted, results.result.upserted.map(({ _id }) =>  _id ));
 };
 
 const upsertMvrs = async (mvrArray) => {
