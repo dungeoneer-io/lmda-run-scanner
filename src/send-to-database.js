@@ -11,8 +11,8 @@ const upsertRuns = async (runArray) => {
     const batch = runColl.initializeUnorderedBulkOp();
     runArray.sort((a, b) => a._id > b._id ? -1 : 1);
 
-    const last = undefined;
-    const sent = 0;
+    let last = undefined;
+    let sent = 0;
     runArray.forEach((run) => {
         if (run._id !== last) {
             batch.find({ _id: `${run._id}` })
